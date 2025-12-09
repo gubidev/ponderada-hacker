@@ -6,10 +6,10 @@ O servidor web atual é altamente vulnerável, pois **não implementa nenhuma au
 | :--- | :--- | :--- |
 | 01 | **Controle Não Autorizado** | Qualquer cliente pode enviar comandos (ex: `/26/on`) e controlar o hardware. |
 | 02 | **Comunicação em Texto Simples** | O uso de HTTP expõe todos os comandos e respostas a ataques de *sniffing* na rede. |
-
+| 03 | **Exposição de Credenciais no Código-Fonte** | As credenciais de Wi-Fi (ssid e password) estão codificadas diretamente, tornando-as visíveis a qualquer pessoa que tenha acesso ao firmware ou ao código-fonte.|
 ---
 
-## 2. Mitigação e Recomendações (Como Corrigir)
+## 2. Mitigação e Recomendações 
 
 As seguintes ações são críticas para garantir a segurança da solução IoT:
 
