@@ -4,8 +4,8 @@ O servidor web atual é altamente vulnerável, pois **não implementa nenhuma au
 
 | ID | Vulnerabilidade | Descrição |
 | :--- | :--- | :--- |
-| V-01 | **Controle Não Autorizado** | Qualquer cliente pode enviar comandos (ex: `/26/on`) e controlar o hardware. |
-| V-02 | **Comunicação em Texto Simples** | O uso de HTTP expõe todos os comandos e respostas a ataques de *sniffing* na rede. |
+| 01 | **Controle Não Autorizado** | Qualquer cliente pode enviar comandos (ex: `/26/on`) e controlar o hardware. |
+| 02 | **Comunicação em Texto Simples** | O uso de HTTP expõe todos os comandos e respostas a ataques de *sniffing* na rede. |
 
 ---
 
