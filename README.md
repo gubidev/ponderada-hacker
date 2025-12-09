@@ -61,18 +61,18 @@ Os ataques são ordenados do **maior risco** para o **menor risco**.
 
 As seguintes ações são críticas para garantir a segurança da solução IoT:
 
-### Ação 1: Proteger Credenciais (Mitiga V-03)
+### Ação 1: Proteger Credenciais 
 
 * **Correção:** As credenciais de Wi-Fi (`ssid` e `password`) devem ser lidas de um local seguro, como a **memória flash (Preferences/EEPROM)**, e **NÃO** codificadas no código-fonte. Isso impede que a senha da rede seja distribuída junto com o código.
 
-### Ação 2: Implementar Autenticação (Mitiga V-01)
+### Ação 2: Implementar Autenticação 
 
 É obrigatório restringir o acesso apenas a clientes autorizados.
 
 * **Método Recomendado:** Usar um **Token de Acesso Secreto** na URL. O código deve verificar se a string de solicitação contém o token correto (ex: `header.indexOf("token=CHAVE_SECRETA_UNICA")`).
 * **Melhoria Adicional:** Implementar a **Autenticação HTTP Digest** (mais segura que a HTTP Basic) para acesso à página principal.
 
-### Ação 3: Criptografar a Comunicação (Mitiga V-02)
+### Ação 3: Criptografar a Comunicação 
 
 O tráfego de comandos deve ser criptografado para proteger contra *sniffing* e ataques Man-in-the-Middle (MITM).
 
