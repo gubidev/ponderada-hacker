@@ -26,9 +26,9 @@ Abaixo estão os ataques mais críticos identificados, com suas avaliações de 
 Explora a vulnerabilidade **V-03 (Exposição de Credenciais)**.
 
 * **Passo-a-Passo:**
-    1 .  O atacante obtém acesso ao **código-fonte** do projeto.
-    2 .  O atacante extrai o **Password do Wi-Fi** diretamente das constantes globais (`const char* password = ...`).
-    3 .  O atacante usa a senha roubada para se conectar à **rede Wi-Fi principal**, obtendo acesso a todos os outros dispositivos conectados.
+    1.  O atacante obtém acesso ao **código-fonte** do projeto.
+    2.  O atacante extrai o **Password do Wi-Fi** diretamente das constantes globais (`const char* password = ...`).
+    3.  O atacante usa a senha roubada para se conectar à **rede Wi-Fi principal**, obtendo acesso a todos os outros dispositivos conectados.
 * **Probabilidade:** **Média/Alta**. *Justificativa:* O código-fonte é frequentemente compartilhado (ex: Git, repositório interno). A credencial está em texto claro no código.
 * **Impacto:** **Crítico**. *Justificativa:* O ataque compromete **toda a rede**, não apenas o ESP32, possibilitando roubo de dados e acesso a sistemas críticos.
 
@@ -37,9 +37,9 @@ Explora a vulnerabilidade **V-03 (Exposição de Credenciais)**.
 Explora a vulnerabilidade **V-01 (Falta de Autenticação)**.
 
 * **Passo-a-Passo:**
-    1 .  O atacante se conecta à mesma **rede Wi-Fi local**.
-    2 .  Usa ferramentas de varredura (ex: Nmap) para descobrir o **endereço IP** do ESP32.
-    3 .  Envia requisições HTTP diretas (ex: `http://<IP_do_ESP32>/26/on`) para controlar os GPIOs.
+    1.  O atacante se conecta à mesma **rede Wi-Fi local**.
+    2.  Usa ferramentas de varredura (ex: Nmap) para descobrir o **endereço IP** do ESP32.
+    3.  Envia requisições HTTP diretas (ex: `http://<IP_do_ESP32>/26/on`) para controlar os GPIOs.
 * **Probabilidade:** **Muito Alta**. *Justificativa:* O ataque é trivial; qualquer pessoa na rede pode fazê-lo sem autenticação ou ferramentas avançadas.
 * **Impacto:** **Alto**. *Justificativa:* Pode causar danos físicos (se o GPIO controlar um relé ou motor) ou operacionais, dependendo do equipamento conectado.
 
